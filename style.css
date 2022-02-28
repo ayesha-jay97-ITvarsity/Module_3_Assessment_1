@@ -1,0 +1,244 @@
+/*============ STANDARD FORMAT (NO DIVS) ===============*/
+
+html{
+    height: 100%;                           /* also useful for when adding a background image */
+}
+
+body{                                       /* all body content in all pages (not wrapped with divs) will have the following formating */
+    font-family: sans-serif;
+    margin     : 0;
+    padding    : 0;
+    height     : 100%;                      /* useful for when adding background images */
+}
+
+.body-home{
+    background-image     : url("images/background-01-port.png");
+    background-position  : center;                                  /* ensures that the image is centre-positioned in page */
+    background-attachment: fixed;                                   /* ensures that image remains fixed i place even when scrolling down */
+    background-repeat    : no-repeat;                               /* our background image does not repeat as we scroll */
+    background-size      : cover;                                   /* removes the white space on either wide of our background image */
+}
+
+/*============ HOME PAGE  ===============*/
+
+/*====== Home Logo ======*/
+
+#home-logo-img {                            /* # and not . because we gave the image a div ID and not a class */
+    width  : 50px;                          /* adj logo image width */
+    display: block;                         /* to give the image a square dimension, which helps with positioning the img in the page */
+    margin : auto;                          /* margin: auto & display: block ensures the logo img is always aligned to the centre of the page */ 
+    padding: 25px 10px 10px 10px;           /* all round padding around the image in the order: top (25px), right, bottom, left (clockwise staring from top */
+}
+
+#home-logo-text{                            /* # and not . because we gave the image a div ID and not a class */
+    width   : auto;                         /* since the image size is already a good size, leave as is? */
+    display : block;                        /* to give the image a square dimension, which helps with positioning the img in the page */
+    margin  : auto;                         /* margin: auto & display: block ensures the logo img is always aligned to the centre of the page */ 
+    padding : 25px;                         /* all-round padding */
+}
+
+/*====== Home Menu ======*/
+
+.home-menu-item{                            /* hyperlink with div class "home-menu-items */
+    text-decoration: none;                  /* no underline beneath hyperlink */
+    text-transform : uppercase;             /* makes hyperlink text written in caps, even though the text in our index.html is not written in caps */
+
+    color          : white;
+    font-size      : 25px;
+    font-weight    : bold;
+    text-align     : center;
+    border         : 5px solid white;
+
+    display        : block;                 /* ensures that border around the hyperlink is displayed as a block */
+    margin         : auto;                  /* margin around hyperlink text */
+    margin-bottom  : 10px;                  /* creates a padding below other menu elements*/
+    width          : 80%;
+}
+
+/*============ MEAL PAGE  ===============*/
+
+#meals {
+    padding-top: 50px;                      /* we know that our header has a height of 50px (Section "header" code line 110) */
+}
+
+/*====== Meals List ======*/
+
+.meals-list a {                             /* we refer to the class "meals-list", which has a hyperlink in it. so we style the hyperlink within that class (Note: we did not specify a class for the hyperlink, so we referened the div that the hyperlink was wrapped inside, and modified the hyperlink accordingly, so that's why the "a" comes AFTER the ".meals-list" (.meals-list a) */
+    text-decoration: none;                  /* no underline */
+}
+
+.meals-list-item {                          /* we ref the div with the class "meals-list-item" */
+    border: 5px solid #1a1a1a;            /* we give the div a border so that there is a border around the heading & paragraphs aroud each meal item in the "meals-list-item" */
+    margin: 10px;
+}
+
+.meals-list-item h1 {                       /* style the heading in the div class "meals-list-item" */
+    font-weight : bold;
+    font-size   : 20px;
+    padding-left: 10px;                     /* so that the heading is not right against the border */
+    color       : #1a1a1a;                /* same colour as border */
+}
+
+.meals-list-item p{                         /* paragraphs in the parent div with class "meals-list-item" */
+    font-size   : 15px;                     /* we make it slightly smaller because its only a subheading */ 
+    font-style  : italic;                   /* italicise the parapraph description */
+    color       : #4d4d4d;                /* slightly lighter than the heading font colour */
+    margin-top  : -7px;                     /* to reduce the space between the heading and paragraph */
+    padding-left: 10px;                     /* same padding as between heading and border */
+}
+
+.meals-list-item i{                         /* to style the icon in the div "meals-list-item" */
+    float           : right;                /* make arrow float to the right */
+    color           : #1a1a1a;            /* same colour as h1 */
+    padding-right   : 10px;                 /* add some space on the left of the arrow */
+    padding-top     : 13px;                 /* add some above the arrow so that the arrrow is centred within the box */
+}
+
+.body-meals{
+    background-image     : url("images/background-02-port.png");    /* background image */ 
+    background-position  : center;                                  /* ensures that the image is centre-positioned in page */
+    background-attachment: fixed;                                   /* ensures that image remains fixed i place even when scrolling down */
+    background-repeat    : no-repeat;                               /* our background image does not repeat as we scroll */
+    background-size      : cover;                                   /* removes the white space on either wide of our background image */
+}
+
+/*============ HEADER ===============*/
+
+.header {                                    /* div with "header" class. we are giving the div itself a background colour, so we do not specify any element within the div */    
+    background-color: #2196f3;
+    width           : 100%;
+    height          : 50px;
+    top             : 0;                     /* so that there is no space above the header bar */
+    position        : fixed;                 /* blue bar remains fixe when scrolling */
+    overflow        : hidden;                /* prevents scrollbars from showing up */
+    text-align      : center;
+}
+
+.header i {
+    float: left;
+    padding: 17px 0px 0px 17px;              /* only top & left given padding */
+    color: white;
+}
+
+.header img {                                /* the logo text img */
+    width        : 150px;                    /* we use width because it is an img object */
+    padding      : 14px;
+    padding-right: 25px;;
+}
+
+/*============ RECIPE PAGE ==============*/
+
+#recipe {
+    padding-top: 50px;
+}
+
+/*======== Recipe Details ========*/
+
+.recipe-details img {
+    width   : 100%;
+}
+
+.recipe-details h1 {
+    font-size   : 25px;
+    text-align  : center;
+    border      : 5px solid #1a1a1a;
+    margin      : 10px;
+    padding     : 5px;
+}
+
+.recipe-details h2 {
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.recipe-details-info {                              /* div class which contains the recipe info */
+    margin-left : 25px;
+    margin-right: 25px;
+}
+
+.recipe-details-info p {
+    font-size   : 13px;
+    display     : inline-block;                     /* to make the "Yield" paragraph appr in the same line as the "Prep-time" paragraph text */
+}
+
+/*======== Ingredients Checkbox ========*/
+
+.recipe-details-ingredients label {                 /* to style the checkbox labels in our ingredients div */
+    line-height: 25px;                              /* the vertical spacing between each checkbox */
+    margin-left: 10px;                              /* spacing on left of checkboxes */
+}
+
+/*======== Recipe Steps ========*/
+
+.recipe-details-steps{                              /* modify the recipe steps section */
+    padding-top: 20px;                              /* we give the div with the recipe steps some padding on top so that the heading is not to close to the ingredients above */
+}
+
+.recipe-details-steps ol {                          /* modify the recipe list of steps */
+    padding-left : 28px;                            /* add some spacing on the left so that steps are closer to the left page border */
+    padding-right: 10px;                            /* add some spacing on the right so that the steps are not right up against the page border */
+}
+
+/*============ RESPONSIVE LAYOUT ==============*/
+
+/*======== Content ========*/
+
+@media only screen and (min-width: 600px) {           /* when viewer's screen has a width of 600px, change some of our style to adjust to that screen size (e.g. paragraphs, headings, etc) */
+    #meals {                                          /* we adjust the div with the "meals" id in meals.html, which contains the meals list (grilled cheese) */
+        width : 80%;                                  /* at screen size 600px and >, the meals div will shrink to 80% of the screen instead of stretching to the full 100% (as specified in the css code above), as 600px for a screen is large) */
+        margin: auto;                                 /* ensures that div with the menu-item content (grilled cheese) is centred (automatic margins) when the screen width is 600px and > */
+    }
+
+    #recipe {
+        width : 80%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1000px) {          /* when viewer's screen has a width of 1000px, change some of our style to adjust to that screen size (e.g. paragraphs, headings, content widdth, etc) */
+    #meals {                                          /* we adjust the div with the "meals" id in meals.html, which contains the meals list (grilled cheese) */
+        width : 60%;                                  /* at screen size of 1000px and >, the meals div will shrink to 60% of the screen instead of stretching to the full 100% (as specified in the css code above) */
+        margin: auto;                                 /* ensures that div with the menu-item content (grilled cheese) is centred (automatic margins) when the screen width is 600px and > */
+    }
+
+    #recipe {                                         
+        width : 60%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1500px) {          /* when viewer's screen has a width of 1500px, change some of our style to adjust to that screen size (e.g. paragraphs, headings, content widdth, etc) */
+    #meals {                                          /* we adjust the div with the "meals" id in meals.html, which contains the meals list (grilled cheese) */
+        width : 40%;                                  /* at screen size of 1500px and >, the meals div will shrink to 40% of the screen instead of stretching to the full 100% (as specified in the css code above) */
+        margin: auto;                                 /* ensures that div with the menu-item content (grilled cheese) is centred (automatic margins) when the screen width is 600px and > */
+    }
+
+    #recipe {                                         
+        width : 40%;
+        margin: auto;
+    }
+}
+
+/*======== Background Images ========*/
+
+/* when the screen is very big (e.g. >1500px), then the 
+   portrait-view images are to small to use as a backgr img,
+   so we use the landscape vers of the img's instead in our 
+   media query/responsive layout.    
+*/
+
+@media only screen and (min-width: 720px) {                     /* when screen width is 720px or >, the following stylng changes will be made to the page appearance */
+    .body-home {
+        background-image: url("images/background-01-land.png"); 
+    }
+
+    .body-meals {
+        background-image: url("images/background-02-land.png");
+    }
+}
+
+/* NOTE: check if your website is responsive in the Firefox browser, 
+   as chrome and MS Edge does not reflect the responsiveness of the 
+   design for some reason */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Recipe Book | Meals | Grilled Cheese </title>                            <!-- title of page tab in browser -->
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "fontAwesome/css/all.css">         <!-- we didn't need this in our home page, so we didn't link it-->
+    </head>
+
+    <body class = "body-recipes">                                  <!-- not a div, but we can still style tags with assigned classes-->
+        <div class = "header">                                   <!-- header menu bar on the meals page (some devices don't have an inbuilt back-button, so the app needs to have one)-->
+            <a href = "meals.html"><i class = "fa-solid fa-arrow-left"></i></a>   <!-- we place the arrow icon inside the <a> cos we want that to be the hyperlink to the home page-->
+            <img src = "images/logo-text.png">
+        </div>
+
+        <div id = "recipe">
+            <div class = "recipe-details">
+
+                <img src = "images/grilledCheese.png">
+
+                <h1> Grilled Cheese Sandwich </h1>
+
+                <div class = "recipe-details-info">
+                    <p><b> Prep time:</b> 10 min </p>
+                    <p style = "float: right;"><b> Yield:</b> 4 </p>    <!-- to make the word "Yield" appr to the left of the right -->
+                </div>
+
+                <div class = "recipe-details-ingredients">
+                    <h2> Ingredients </h2>                              <!-- make it smaller than the page heading size -->
+
+                    <input id = "check-01" type = "checkbox">                       <!-- to create a checkbox for the ingred's-->
+                    <label for = "check-01" > 1/4 cup butter, softened </label>     <!-- the actual label ingredient that must be checked in the checkbox-->
+
+                    <br>
+
+                    <input id = "check-02" type = "checkbox">                               
+                    <label for = "check-02" > 1 tablespoon grated Parmesan cheese </label>
+
+                    <br>
+
+                    <input id = "check-03" type = "checkbox">           <!-- to create a checkbox for the ingred's-->
+                    <label for = "check-03" > 8 Italian bread slices </label>
+
+                    <br>
+
+                    <input id = "check-04" type = "checkbox">           <!-- to create a checkbox for the ingred's-->
+                    <label for = "check-04" > 4 (3/4-oz.) provolone cheese slices </label>
+
+                    <br>
+
+                    <input id = "check-05" type = "checkbox">           <!-- to create a checkbox for the ingred's-->
+                    <label for = "check-05" > 4 (3/4-oz.) mozzarella cheese slices </label>
+                </div>
+
+                <div class="recipe-details-steps">                      <!-- we now add in the steps of the recipe -->
+                    <h2> Steps </h2>
+
+                    <ol>                                                                        <!-- steps will be in the form of an ordered list -->
+                        <li> Stir together butter and Parmesan cheese in a small bowl.</li>     <!-- now list each item (without number cos ol already means the list items will be numbered)-->
+
+                        <li> Spread 1 1/2 tsp. butter mixture on 1 side of each 
+                             bread slice. Place 4 bread slices, buttered sides down, 
+                             on wax paper. Top with provolone and mozzarella cheeses; 
+                             top with remaining bread slices, buttered sides up. 
+                        </li>
+
+                        <li> Cook sandwiches, in batches, on a hot griddle or in a 
+                            non-stick skillet over medium heat, gently pressing with 
+                            a spatula, 4 minutes on each side or until golden brown 
+                            and cheese is melted. 
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+            
+        </div>     
+    </body>
+</html> 
