@@ -128,22 +128,35 @@ body{                                       /* all body content in all pages (no
 
 /*============ RECIPE PAGE ==============*/
 
+.body-recipes {
+    background-image: url("images/background-02-land.png");
+    background-position  : center;                                  /* ensures that the image is centre-positioned in page */
+    background-attachment: fixed;                                   /* ensures that image remains fixed i place even when scrolling down */
+    background-repeat    : no-repeat;                               /* our background image does not repeat as we scroll */
+    background-size      : cover;  
+}
+
 #recipe {
     padding-top: 50px;
 }
 
-/*======== Recipe Details ========*/
+/*======== Recipe Image ========*/
 
 .recipe-details img {
     width   : 100%;
+    border: #1a1a1a solid 5px;
+    margin: 20px;
 }
+
+/*======== Recipe Details ========*/
 
 .recipe-details h1 {
     font-size   : 25px;
     text-align  : center;
     border      : 5px solid #1a1a1a;
-    margin      : 10px;
+    margin-left : 20px;
     padding     : 5px;
+    width       : 100%;
 }
 
 .recipe-details h2 {
@@ -164,6 +177,10 @@ body{                                       /* all body content in all pages (no
 }
 
 /*======== Ingredients Checkbox ========*/
+
+.recipe-details-ingredients h2{
+    margin-bottom: 10px;
+}
 
 .recipe-details-ingredients label {                 /* to style the checkbox labels in our ingredients div */
     line-height: 25px;                              /* the vertical spacing between each checkbox */
